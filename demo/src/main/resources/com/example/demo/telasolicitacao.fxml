@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" prefHeight="377.0" prefWidth="643.0" spacing="10" style="-fx-background-color: #0a836b;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.TelaSolicitacaoController">
+    <children>
+        <Label />
+        <HBox spacing="10">
+            <children>
+                <Label text="Nome do Produto:" textFill="#e8dede">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+                <TextField fx:id="nomeProdutoField" />
+                <Label prefHeight="17.0" prefWidth="101.0" text="Código de Barras:" textFill="#ffe6e6">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+                <TextField fx:id="codBarraField" />
+                <Button onAction="#handlePesquisar" prefHeight="25.0" prefWidth="68.0" text="Pesquisar" textFill="#0a836b" />
+            </children>
+        </HBox>
+        <TableView fx:id="produtoTable" prefHeight="314.0" prefWidth="643.0">
+            <columns>
+                <TableColumn fx:id="nomeColumn" text="Nome" />
+                <TableColumn fx:id="marcaColumn" text="Marca" />
+                <TableColumn fx:id="codBarraColumn" text="Código de Barras" />
+                <TableColumn fx:id="validadeColumn" text="Validade" />
+                <TableColumn fx:id="numLoteColumn" text="Número do Lote" />
+                <TableColumn fx:id="descricaoColumn" text="Descrição" />
+                <TableColumn fx:id="quantidadeColumn" text="Quantidade" />
+
+            </columns>
+        </TableView>
+        <HBox prefHeight="0.0" prefWidth="643.0" spacing="10" />
+    </children>
+</VBox>

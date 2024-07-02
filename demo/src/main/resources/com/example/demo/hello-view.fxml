@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="492.0" prefWidth="600.0" style="-fx-background-color: #0a836b;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.HelloController">
+    <children>
+        <Pane layoutX="165.0" layoutY="11.0" prefHeight="460.0" prefWidth="270.0" style="-fx-background-color: #FFFFFF;">
+            <children>
+                <Label fx:id="erroCadastro" layoutX="128.0" layoutY="280.0" textFill="RED" />
+                <Label layoutX="63.0" layoutY="14.0" text="Cadastro" textFill="#0a836b">
+                    <font>
+                        <Font name="System Bold" size="26.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="email" layoutX="14.0" layoutY="122.0" prefHeight="25.0" prefWidth="228.0" promptText="E-mail" />
+                <TextField fx:id="nome" layoutX="14.0" layoutY="88.0" prefHeight="25.0" prefWidth="228.0" promptText="Nome Completo" />
+                <PasswordField fx:id="senha" layoutX="14.0" layoutY="156.0" prefHeight="25.0" prefWidth="228.0" promptText="Senha" />
+                <PasswordField fx:id="confirmarSenha" layoutX="14.0" layoutY="190.0" prefHeight="25.0" prefWidth="228.0" promptText="Confirmar Senha" />
+                <Button fx:id="cadastrar" layoutX="45.0" layoutY="378.0" mnemonicParsing="false" onAction="#botaoCadastrar" prefHeight="25.0" prefWidth="165.0" text="Cadastrar" textFill="#0a836b" />
+                <CheckBox fx:id="termos" layoutX="15.0" layoutY="224.0" mnemonicParsing="false" opacity="0.8" text="Aceito as políticas e termos de uso" textFill="#0a836b" />
+                <Label layoutX="15.0" layoutY="53.0" opacity="0.8" text="Preencha o formulário para criar sua conta!" textFill="#0a836b" />
+              <Label layoutX="34.0" layoutY="420.0" text="Já possui uma conta?" textFill="#0a836b" />
+              <Hyperlink fx:id="voltalogin" layoutX="146.0" layoutY="417.0" onAction="#teladelogin" text="Entrar aqui." textFill="#0a836b" underline="true" />
+            </children></Pane>
+    </children>
+</Pane>
