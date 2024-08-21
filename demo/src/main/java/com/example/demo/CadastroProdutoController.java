@@ -33,7 +33,7 @@ public class CadastroProdutoController {
     private void initialize() {
         cadastraButton.setOnAction(this::cadastrarProduto);
 
-        // Adicionando listeners para transformar texto em maiúsculas RAIMUNDO BARROS
+        // Adicionando listeners para transformar texto em maiúsculas
         addUpperCaseListener(nomeProduto);
         addUpperCaseListener(marca);
         addUpperCaseListener(codbarra);
@@ -53,17 +53,17 @@ public class CadastroProdutoController {
     private void cadastrarProduto(ActionEvent event) {
         ProdutoDAO produtoDAO = new ProdutoDAO();
 
-        // Tenta converter a quantidade para inteiro   RAIMUNDO BARROS
+        // Tenta converter a quantidade para inteiro
         int quantidade;
         try {
             quantidade = Integer.parseInt(quantidadeField.getText());
         } catch (NumberFormatException e) {
-            // Quantidade inválida, exibe mensagem de erro RAIMUNDO BARROS
+            // Quantidade inválida, exibe mensagem de erro
             mensagemLabel.setText("Quantidade inválida. Digite um número inteiro.");
             return;
         }
 
-        // Verifica a data de validade RAIMUNDO BARROS
+        // Verifica a data de validade
         Date validadeDate = null;
         if (!validade.getText().isEmpty()) {
             try {
@@ -74,7 +74,7 @@ public class CadastroProdutoController {
             }
         }
 
-        // Verifica o número do lote RAIMUNDO BARROS
+        // Verifica o número do lote
         String loteText = lote.getText().isEmpty() ? null : lote.getText();
 
         Produto produto = new Produto(
@@ -95,6 +95,7 @@ public class CadastroProdutoController {
         }
     }
 
+    // Getters e setters
 
     public TextField getNomeProduto() {
         return nomeProduto;
