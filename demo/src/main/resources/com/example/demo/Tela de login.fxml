@@ -5,13 +5,20 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="490.0" prefWidth="600.0" style="-fx-background-color: #0a836b;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.Teladelogin">
     <children>
-        <Pane layoutX="165.0" layoutY="14.0" prefHeight="449.0" prefWidth="270.0" style="-fx-background-color: #FFFFFF;">
+        <Pane layoutX="165.0" layoutY="4.0" prefHeight="480.0" prefWidth="272.0" style="-fx-background-color: #FFFFFF;">
             <children>
+            <ImageView fitHeight="203.0" fitWidth="233.0" layoutX="18.0" layoutY="202.0" opacity="0.61" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../../../../Users/PEQUI/Downloads/Qual-a-importância-de-ter-um-sistema-de-controle-de-estoque_00001.jpg" />
+               </image>
+            </ImageView>
                 <Label fx:id="erroCadastro" layoutX="128.0" layoutY="280.0" textFill="RED" />
                 <Label layoutX="87.0" layoutY="14.0" text="Login" textFill="#0a836b">
                     <font>
@@ -19,11 +26,11 @@
                     </font>
                 </Label>
                 <TextField fx:id="email" layoutX="14.0" layoutY="114.0" prefHeight="25.0" prefWidth="246.0" promptText="E-mail" />
-                <Button fx:id="entrar" layoutX="66.0" layoutY="355.0" mnemonicParsing="false" onAction="#botãologar" prefHeight="25.0" prefWidth="137.0" text="Entrar" textFill="#0a836b" />
+                <Button fx:id="entrar" layoutX="66.0" layoutY="382.0" mnemonicParsing="false" onAction="#botãologar" prefHeight="25.0" prefWidth="137.0" text="Entrar" textFill="#0a836b" />
                 <Label layoutX="44.0" layoutY="67.0" opacity="0.8" text="Insira as informações para login" textFill="#0a836b" />
                 <PasswordField fx:id="senha" layoutX="12.0" layoutY="157.0" prefHeight="25.0" prefWidth="246.0" promptText="Senha" />
-              <Label layoutX="25.0" layoutY="407.0" text="Não possui uma conta?" textFill="#0a836b" />
-              <Hyperlink fx:id="cadastro" layoutX="149.0" layoutY="404.0" onAction="#teladecadastro" text="Entrar aqui." textFill="#0a836b" underline="true" />
+              <Label layoutX="25.0" layoutY="434.0" text="Não possui uma conta?" textFill="#0a836b" />
+              <Hyperlink fx:id="cadastro" layoutX="149.0" layoutY="431.0" onAction="#teladecadastro" text="Entrar aqui." textFill="#0a836b" underline="true" />
             </children></Pane>
     </children>
 </Pane>

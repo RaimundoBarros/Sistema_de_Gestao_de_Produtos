@@ -5,19 +5,25 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #0a836b;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.RelatorioRetiradasController">
+<VBox alignment="CENTER" spacing="10" style="-fx-background-color: #0a836b;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.RelatorioRetiradasController">
     <children>
-        <Label layoutX="184.0" layoutY="14.0" text="Relatório de Retiradas" textFill="#eee4e4">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font></Label>
-        <TextField fx:id="filterCodBarra" layoutX="14.0" layoutY="50.0" onAction="#filtrarRetiradas" promptText="Filtrar por Código de Barras" />
-        <TextField fx:id="filterNome" layoutX="230.0" layoutY="50.0" onAction="#filtrarRetiradas" promptText="Filtrar por Nome" />
-        <Button layoutX="462.0" layoutY="50.0" mnemonicParsing="false" onAction="#filtrarRetiradas" prefHeight="25.0" prefWidth="87.0" text="Filtrar" textFill="#0a836b" />
-        <TableView fx:id="tabelaRetiradas" layoutX="14.0" layoutY="100.0" prefHeight="200.0" prefWidth="570.0">
+        <Label text="Relatório de Retiradas" textFill="#eee4e4">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+        <HBox spacing="10" alignment="CENTER">
+            <children>
+                <TextField fx:id="filterCodBarra" onAction="#filtrarRetiradas" promptText="Filtrar por Código de Barras" />
+                <TextField fx:id="filterNome" onAction="#filtrarRetiradas" promptText="Filtrar por Nome" />
+                <Button onAction="#filtrarRetiradas" prefHeight="25.0" text="Filtrar" textFill="#0a836b" />
+            </children>
+        </HBox>
+        <TableView fx:id="tabelaRetiradas" prefHeight="200.0" prefWidth="570.0">
             <columns>
                 <TableColumn fx:id="colCodBarra" prefWidth="100.0" text="Código de Barras" />
                 <TableColumn fx:id="colNome" prefWidth="100.0" text="Nome" />
@@ -27,4 +33,4 @@
             </columns>
         </TableView>
     </children>
-</AnchorPane>
+</VBox>

@@ -5,29 +5,39 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
 <VBox alignment="TOP_CENTER" prefHeight="377.0" prefWidth="643.0" spacing="10" style="-fx-background-color: #0a836b;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.TelaSolicitacaoController">
+    <padding>
+        <Insets top="10" right="20" bottom="10" left="20"/>
+    </padding>
     <children>
-        <Label />
-        <HBox spacing="10">
+        <Label text="Pesquisar Produto" textFill="#eee4e4">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+        <HBox spacing="10" alignment="CENTER">
             <children>
                 <Label text="Nome do Produto:" textFill="#e8dede">
-               <font>
-                  <Font name="System Bold" size="12.0" />
-               </font></Label>
-                <TextField fx:id="nomeProdutoField" />
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="nomeProdutoField" HBox.hgrow="ALWAYS"/>
                 <Label prefHeight="17.0" prefWidth="101.0" text="Código de Barras:" textFill="#ffe6e6">
-               <font>
-                  <Font name="System Bold" size="12.0" />
-               </font></Label>
-                <TextField fx:id="codBarraField" />
-                <Button onAction="#handlePesquisar" prefHeight="25.0" prefWidth="68.0" text="Pesquisar" textFill="#0a836b" />
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="codBarraField" HBox.hgrow="ALWAYS"/>
+                <Button onAction="#handlePesquisar" prefHeight="25.0" text="Pesquisar" textFill="#0a836b"/>
             </children>
         </HBox>
-        <TableView fx:id="produtoTable" prefHeight="314.0" prefWidth="643.0">
+        <TableView fx:id="produtoTable" VBox.vgrow="ALWAYS">
             <columns>
                 <TableColumn fx:id="nomeColumn" text="Nome" />
                 <TableColumn fx:id="marcaColumn" text="Marca" />
@@ -36,9 +46,7 @@
                 <TableColumn fx:id="numLoteColumn" text="Número do Lote" />
                 <TableColumn fx:id="descricaoColumn" text="Descrição" />
                 <TableColumn fx:id="quantidadeColumn" text="Quantidade" />
-
             </columns>
         </TableView>
-        <HBox prefHeight="0.0" prefWidth="643.0" spacing="10" />
     </children>
 </VBox>

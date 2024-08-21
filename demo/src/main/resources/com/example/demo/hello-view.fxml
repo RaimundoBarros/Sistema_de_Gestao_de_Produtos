@@ -26,8 +26,8 @@
                 <Button fx:id="cadastrar" layoutX="45.0" layoutY="378.0" mnemonicParsing="false" onAction="#botaoCadastrar" prefHeight="25.0" prefWidth="165.0" text="Cadastrar" textFill="#0a836b" />
                 <CheckBox fx:id="termos" layoutX="15.0" layoutY="224.0" mnemonicParsing="false" opacity="0.8" text="Aceito as políticas e termos de uso" textFill="#0a836b" />
                 <Label layoutX="15.0" layoutY="53.0" opacity="0.8" text="Preencha o formulário para criar sua conta!" textFill="#0a836b" />
-              <Label layoutX="34.0" layoutY="420.0" text="Já possui uma conta?" textFill="#0a836b" />
-              <Hyperlink fx:id="voltalogin" layoutX="146.0" layoutY="417.0" onAction="#teladelogin" text="Entrar aqui." textFill="#0a836b" underline="true" />
+                <Label layoutX="34.0" layoutY="420.0" text="Já possui uma conta?" textFill="#0a836b" />
+                <Hyperlink fx:id="voltalogin" layoutX="146.0" layoutY="417.0" onAction="#teladelogin" text="Entrar aqui." textFill="#0a836b" underline="true" />
             </children></Pane>
     </children>
 </Pane>
